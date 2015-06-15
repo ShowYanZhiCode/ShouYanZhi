@@ -28,8 +28,6 @@
     [btn setTintColor:[UIColor whiteColor]];
     [view addSubview:btn];
     
-    NSLog(@"123123");
-    
 }
 
 -(void)BtndownClick{
