@@ -56,15 +56,15 @@
 #pragma mark -
 #pragma mark UITableView Delegate
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:20];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)sectionIndex
-{
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)sectionIndex{
+    
     if (sectionIndex == 0)
         return nil;
     
@@ -82,51 +82,51 @@
     return view;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)sectionIndex
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)sectionIndex{
+    
     if (sectionIndex == 0)
         return 0;
     
     return 34;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0 && indexPath.row == 0) {
         
         IndividualViewController *homeViewController = [[IndividualViewController alloc] init];
 //        NavigationViewController *navigationController = [[NavigationViewController alloc] initWithRootViewController:homeViewController];
 //        self.frostedViewController.contentViewController = navigationController;
-        [self presentViewController:homeViewController animated:YES completion:^{
+        [self presentViewController:homeViewController animated:NO completion:^{
             
         }];
         
     } else if (indexPath.section == 0 && indexPath.row == 1) {
         
         AttentionViewController *secondViewController = [[AttentionViewController alloc] init];
-        [self presentViewController:secondViewController animated:YES completion:^{
+        [self presentViewController:secondViewController animated:NO completion:^{
             
         }];
         
     }else if (indexPath.section == 0 && indexPath.row == 2) {
         
         MessageViewController *thirdViewController = [[MessageViewController alloc] init];
-        [self presentViewController:thirdViewController animated:YES completion:^{
+        [self presentViewController:thirdViewController animated:NO completion:^{
             
         }];
         
     }else if (indexPath.section == 0 && indexPath.row == 3) {
         
         SettingViewController *fourthViewController = [[SettingViewController alloc] init];
-        [self presentViewController:fourthViewController animated:YES completion:^{
+        [self presentViewController:fourthViewController animated:NO completion:^{
             
         }];
         
     }else if (indexPath.section == 0 && indexPath.row == 4) {
         
         HelpViewController *fifthViewController = [[HelpViewController alloc] init];
-        [self presentViewController:fifthViewController animated:YES completion:^{
+        [self presentViewController:fifthViewController animated:NO completion:^{
             
         }];
         
@@ -138,23 +138,23 @@
 #pragma mark -
 #pragma mark UITableView Datasource
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     return 54;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex{
+    
     return 5;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     static NSString *cellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -166,7 +166,6 @@
     if (indexPath.section == 0) {
         NSArray *titles = @[@"个人", @"关注", @"消息",@"设置", @"帮助",];
         cell.textLabel.text = titles[indexPath.row];
-        
     }
     //    } else {
     //        NSArray *titles = @[@"John Appleseed", @"John Doe", @"Test User"];
