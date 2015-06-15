@@ -1,0 +1,33 @@
+//
+//  ShowFace.pch
+//  ShowFace
+//
+//  Created by Tonglin.jia on 15/6/12.
+//  Copyright (c) 2015年 Tonglin.jia. All rights reserved.
+//
+
+#ifndef ShowFace_ShowFace_pch
+#define ShowFace_ShowFace_pch
+
+#import "REFrostedViewController.h"
+#import "BaseViewController.h"
+#import "NavigationViewController.h"
+#import "HomeViewController.h"
+#import "MenuViewController.h"
+
+#import "TabSecondViewController.h"
+#import "TabThirdViewController.h"
+#import "TabFourthViewController.h"
+#import "TabFifthViewController.h"
+
+#import "RDVTabBar.h"
+#import "RDVTabBarController.h"
+#import "RDVTabBarItem.h"
+
+#import "IndividualViewController.h"
+#import "AttentionViewController.h"
+#import "MessageViewController.h"
+#import "SettingViewController.h"
+#import "HelpViewController.h"
+
+#endif
