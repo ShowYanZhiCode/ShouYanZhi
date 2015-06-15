@@ -27,6 +27,7 @@
     [btn setTitle:@"返回" forState:UIControlStateNormal];
     [btn setTintColor:[UIColor whiteColor]];
     [view addSubview:btn];
+    NSLog(@"lalala");
     
 }
 
