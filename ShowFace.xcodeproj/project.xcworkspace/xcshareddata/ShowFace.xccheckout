@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>76EA1180-E8FC-4887-9A85-CD57B7C7FBEC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ShowFace</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BDD1C15EC3B234EF77DC8D642C6AC8E6D6BC7331</key>
+		<string>https://github.com/ShowYanZhiCode/ShouYanZhi.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ShowFace.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BDD1C15EC3B234EF77DC8D642C6AC8E6D6BC7331</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ShowYanZhiCode/ShouYanZhi.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BDD1C15EC3B234EF77DC8D642C6AC8E6D6BC7331</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BDD1C15EC3B234EF77DC8D642C6AC8E6D6BC7331</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ShouYanZhi</string>
+		</dict>
+	</array>
+</dict>
+</plist>
