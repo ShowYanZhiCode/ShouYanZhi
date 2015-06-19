@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "SKSTableView.h"
 
-@interface IndividualViewController : BaseViewController
+@interface IndividualViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource,SKSTableViewDelegate>
 
 @end

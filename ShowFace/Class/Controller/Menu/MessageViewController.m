@@ -18,6 +18,11 @@
     
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self messagePageUI];
+}
+
+-(void)messagePageUI{
+
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0,self.view.bounds.size.width,64)];
     view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:view];
@@ -27,7 +32,7 @@
     [btn setTitle:@"返回" forState:UIControlStateNormal];
     [btn setTintColor:[UIColor whiteColor]];
     [view addSubview:btn];
-    
+
 }
 
 -(void)BtndownClick{

@@ -47,10 +47,17 @@
 #pragma mark - 获取当前屏幕的宽度
 #define SCREEN_WIDTH  ([UIScreen mainScreen].applicationFrame.size.width)
 
+#pragma mark - 获取状态栏高度
+#define CGRect_rectStatus = [[UIApplication sharedApplication] statusBarFrame];
+
+#pragma mark - 获取导航条高度
+#define CGRect_rectNav = self.navigationController.navigationBar.frame;
+
 #pragma mark - 获得RGB/RGBA颜色
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define RandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
 
 #pragma mark - viewWithTag 通过tag值获得子视图
 #define VIEWWITHTAG(_OBJECT,_TAG) [_OBJECT viewWithTag : _TAG]

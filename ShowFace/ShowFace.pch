@@ -29,6 +29,7 @@
 #import "MessageViewController.h"
 #import "SettingViewController.h"
 #import "HelpViewController.h"
+#import "TypeViewController.h"
 
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
@@ -38,5 +39,9 @@
 #import "Config.h"
 #import "CommonDefine.h"
 #import "NotificationManager.h"
+
+#import "HMSegmentedControl.h"
+#import "SKSTableView.h"
+#import "SKSTableViewCell.h"
 
 #endif

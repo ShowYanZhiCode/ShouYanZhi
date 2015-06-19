@@ -18,16 +18,20 @@
     
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self settingPageUI];
+}
+
+-(void)settingPageUI{
+
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0,self.view.bounds.size.width,64)];
     view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:view];
-    
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 20, 45, 30)];
     [btn addTarget:self action:@selector(BtndownClick) forControlEvents:UIControlEventTouchUpInside];
     [btn setTitle:@"返回" forState:UIControlStateNormal];
     [btn setTintColor:[UIColor whiteColor]];
     [view addSubview:btn];
-    
+
 }
 
 -(void)BtndownClick{

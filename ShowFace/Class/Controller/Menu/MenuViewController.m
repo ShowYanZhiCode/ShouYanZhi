@@ -4,7 +4,6 @@
 //
 //  Created by Tonglin.jia on 15/6/12.
 //  Copyright (c) 2015年 Tonglin.jia. All rights reserved.
-//
 
 #import "MenuViewController.h"
 
@@ -50,7 +49,9 @@
         view;
         
     });
+    
     self.tableView.tableFooterView = [[UITableView alloc]init];
+    
 }
 
 #pragma mark -
@@ -99,7 +100,7 @@
 //        NavigationViewController *navigationController = [[NavigationViewController alloc] initWithRootViewController:homeViewController];
 //        self.frostedViewController.contentViewController = navigationController;
         [self presentViewController:homeViewController animated:NO completion:^{
-            
+         
         }];
         
     } else if (indexPath.section == 0 && indexPath.row == 1) {
@@ -118,20 +119,27 @@
         
     }else if (indexPath.section == 0 && indexPath.row == 3) {
         
-        SettingViewController *fourthViewController = [[SettingViewController alloc] init];
+        TypeViewController *fourthViewController = [[TypeViewController alloc] init];
         [self presentViewController:fourthViewController animated:NO completion:^{
             
         }];
         
     }else if (indexPath.section == 0 && indexPath.row == 4) {
         
-        HelpViewController *fifthViewController = [[HelpViewController alloc] init];
+        SettingViewController *fifthViewController = [[SettingViewController alloc] init];
         [self presentViewController:fifthViewController animated:NO completion:^{
             
         }];
         
+    }else if (indexPath.section == 0 && indexPath.row == 5) {
+        
+        HelpViewController *sixViewController = [[HelpViewController alloc] init];
+        [self presentViewController:sixViewController animated:NO completion:^{
+            
+        }];
+        
     }
-
+    
     [self.frostedViewController hideMenuViewController];
 }
 
@@ -156,23 +164,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *cellIdentifier = @"Cell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
-    }
-    
-    if (indexPath.section == 0) {
-        NSArray *titles = @[@"个人", @"关注", @"消息",@"设置", @"帮助",];
+    }if (indexPath.section == 0) {
+        NSArray *titles = @[@"个人", @"关注", @"消息",@"标签",@"设置", @"帮助"];
         cell.textLabel.text = titles[indexPath.row];
     }
-    //    } else {
-    //        NSArray *titles = @[@"John Appleseed", @"John Doe", @"Test User"];
-    //        cell.textLabel.text = titles[indexPath.row];
-    //    }
-    
+//        } else {
+//            NSArray *titles = @[@"John Appleseed", @"John Doe", @"Test User"];
+//            cell.textLabel.text = titles[indexPath.row];
+//        }
     return cell;
+    
 }
 
 @end
