@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface TabSecondViewController : BaseViewController
+@interface TabSecondViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
 @end

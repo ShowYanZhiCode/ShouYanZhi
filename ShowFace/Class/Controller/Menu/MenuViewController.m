@@ -105,21 +105,21 @@
         
     } else if (indexPath.section == 0 && indexPath.row == 1) {
         
-        AttentionViewController *secondViewController = [[AttentionViewController alloc] init];
-        [self presentViewController:secondViewController animated:NO completion:^{
+        TypeViewController *fourthViewController = [[TypeViewController alloc] init];
+        [self presentViewController:fourthViewController animated:NO completion:^{
             
         }];
         
     }else if (indexPath.section == 0 && indexPath.row == 2) {
         
-        MessageViewController *thirdViewController = [[MessageViewController alloc] init];
+        FindFriendViewController *thirdViewController = [[FindFriendViewController alloc] init];
         [self presentViewController:thirdViewController animated:NO completion:^{
             
         }];
         
     }else if (indexPath.section == 0 && indexPath.row == 3) {
         
-        TypeViewController *fourthViewController = [[TypeViewController alloc] init];
+        ActivityViewController *fourthViewController = [[ActivityViewController alloc] init];
         [self presentViewController:fourthViewController animated:NO completion:^{
             
         }];
@@ -134,7 +134,8 @@
     }else if (indexPath.section == 0 && indexPath.row == 5) {
         
         HelpViewController *sixViewController = [[HelpViewController alloc] init];
-        [self presentViewController:sixViewController animated:NO completion:^{
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:sixViewController];
+        [self presentViewController:nav animated:NO completion:^{
             
         }];
         
@@ -158,7 +159,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex{
     
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -169,7 +170,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
     }if (indexPath.section == 0) {
-        NSArray *titles = @[@"个人", @"关注", @"消息",@"标签",@"设置", @"帮助"];
+//        NSArray *titles = @[@"个人", @"关注", @"消息",@"标签",@"设置", @"帮助"];
+        NSArray *titles = @[@"个人",@"标签",@"找好友",@"活动",@"设置",@"帮助"];
         cell.textLabel.text = titles[indexPath.row];
     }
 //        } else {

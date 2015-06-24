@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface TabFourthViewController : BaseViewController
+@interface TabFourthViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
 @end

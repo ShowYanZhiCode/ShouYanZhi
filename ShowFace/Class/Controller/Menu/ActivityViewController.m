@@ -1,28 +1,26 @@
 //
-//  AttentionViewController.m
+//  ActivityViewController.m
 //  ShowFace
 //
-//  Created by Tonglin.jia on 15/6/12.
+//  Created by Tonglin.jia on 15/6/23.
 //  Copyright (c) 2015年 Tonglin.jia. All rights reserved.
 //
 
-#import "AttentionViewController.h"
+#import "ActivityViewController.h"
 
-@interface AttentionViewController ()
+@interface ActivityViewController ()
 
 @end
 
-@implementation AttentionViewController
+@implementation ActivityViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self attentionPageUI];
+    [self settingPageUI];
 }
 
--(void)attentionPageUI{
-
+-(void)settingPageUI{
+    
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0,self.view.bounds.size.width,64)];
     view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:view];
@@ -31,13 +29,12 @@
     [btn setTitle:@"返回" forState:UIControlStateNormal];
     [btn setTintColor:[UIColor whiteColor]];
     [view addSubview:btn];
-
+    
 }
 
 -(void)BtndownClick{
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 @end

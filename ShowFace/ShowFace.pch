@@ -25,11 +25,12 @@
 #import "RDVTabBarItem.h"
 
 #import "IndividualViewController.h"
-#import "AttentionViewController.h"
-#import "MessageViewController.h"
+#import "TypeViewController.h"
+#import "FindFriendViewController.h"
+#import "ActivityViewController.h"
 #import "SettingViewController.h"
 #import "HelpViewController.h"
-#import "TypeViewController.h"
+
 
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"

@@ -1,46 +1,40 @@
 //
-//  MessageViewController.m
+//  FindFriendViewController.m
 //  ShowFace
 //
-//  Created by Tonglin.jia on 15/6/12.
+//  Created by Tonglin.jia on 15/6/23.
 //  Copyright (c) 2015年 Tonglin.jia. All rights reserved.
 //
 
-#import "MessageViewController.h"
+#import "FindFriendViewController.h"
 
-@interface MessageViewController ()
+@interface FindFriendViewController ()
 
 @end
 
-@implementation MessageViewController
+@implementation FindFriendViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self messagePageUI];
+    [self settingPageUI];
 }
 
--(void)messagePageUI{
-
+-(void)settingPageUI{
+    
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0,self.view.bounds.size.width,64)];
     view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:view];
-    
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 20, 45, 30)];
     [btn addTarget:self action:@selector(BtndownClick) forControlEvents:UIControlEventTouchUpInside];
     [btn setTitle:@"返回" forState:UIControlStateNormal];
     [btn setTintColor:[UIColor whiteColor]];
     [view addSubview:btn];
-
+    
 }
 
 -(void)BtndownClick{
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
-
 
 @end

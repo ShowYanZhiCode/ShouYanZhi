@@ -31,7 +31,6 @@
 -(void)typePageUI{
 
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0,self.view.bounds.size.width,64)];
-//    view.backgroundColor = [UIColor colorWithRed:54/255.0 green:54/255.0 blue:54/255.0 alpha:1];
     view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:view];
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 20, 45, 30)];
